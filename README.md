@@ -1,4 +1,4 @@
-# City Green House Gas Emissions Tracker
+# City Peak Emissions Tracker
 
 ### 1) Background
 
