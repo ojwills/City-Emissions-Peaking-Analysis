@@ -9,7 +9,7 @@ C40 collects time series GHG emissions data for each of its 93 cities on an annu
 
 **Table 1: Data Source Hierarchy**
 
-<style="width:80%">
+<table style="width:80%">
   <tr>
     <th colspan="2" style="text-align:center">Data source</th>
     <th colspan="1" style="text-align:center">Data quality</th> 
@@ -92,18 +92,51 @@ The following criteria are used to determine if each city has peaked. If all cri
 For cities with more than one data source the decision tree below is used to select a single data source for inclusion in the results presented by the dashboard.
 
 **Figure 1: Decision tree used to select data sources for inclusion in the peaking analysis**
- 
+
+![Alt text](./peaking_methodology.png?raw=true "Decision tree for dealing with multiple data sources")
 
 In a small number of cases exceptions may be made to the above rule where there are compelling reasons to assume that a city has peaked. These cases are documented in the table below. These cities are handled using the same logic for cities that have already peaked (see above).
 
-Table 3: Criteria to determine if C40 cities have peaked
-City	Peaking criteria met	Peak Status	Rationale
-New Orleans	1, 2 and 4 	PEAKED	Exception made as city confirmed C40 estimate for 2016 data using IPCC Kaya Identity
-Rome	1, 2 and 4 	PEAKED	Exception made as city confirmed C40 estimate for 2015 data from draft 2015 GPC
-Oslo	1, 3 and 4 	PEAKED	Exception made on basis of the scale of reduction and climate actions taken in recent years
+**Table 3: Criteria to determine if C40 cities have peaked**
 
-4) Data Automation/Visualisation
-The results of the peaking analysis are visualised using a dashboard developed using Qlik (see here). On an annual basis C40 repeats the data collection exercise in section 2 to update the source data. In between times the results of the peaking analysis are likely to change as C40 collects city GPC and non-GPC data on a rolling basis. To ensure that these changes are reflected a Python script repeats the analysis on a daily basis ensuring the dashboard is up-to-date. This script follows the rule explained in the data analysis section and is been made open source on GitHub (see here). 
+<table style="width:80%">
+
+<tr>
+  <th>City</th>
+  <th>Peaking criteria</th>
+  <th>Peak status</th>
+  <th>Rationale</th>
+</tr>
+
+<tr>
+  <td>New Orleands</td>
+  <td>1, 2 and 4</td>
+  <td>PEAKED</td>
+  <td>Exception made as city confirmed C40 estimate for 2016 data using IPCC Kaya Identity</td>
+</tr>
+
+
+<tr>
+  <td>Rome</td>
+  <td>1,2 and 4</td>
+  <td>PEAKED</td>
+  <td>Exception made as city confirmed C40 estimate for 2015 data from draft 2015 GPC</td>
+</tr>
+
+
+<tr>
+  <td>Oslo</td>
+  <td>1,3 and 4</td>
+  <td>PEAKED</td>
+  <td>Exception made on basis of the scale of reduction and climate actions taken in recent years</td>
+</tr>
+
+</table>
+
+## 4) Data Automation/Visualisation
+The results of the peaking analysis are visualised using a dashboard developed using Dash (see here). On an annual basis C40 repeats the data collection exercise in section 2 to update the source data. In between times the results of the peaking analysis are likely to change as C40 collects city GPC and non-GPC data on a rolling basis. To ensure that these changes are reflected a Python script repeats the analysis on a daily basis ensuring the dashboard is up-to-date. 
+
+
 
 
 
