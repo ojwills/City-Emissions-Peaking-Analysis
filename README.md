@@ -5,7 +5,7 @@
 A city is considered to have “peaked emissions” when there is sufficient evidence to show that its greenhouse gas (GHG) emissions have decreased from a maximum level. This document explains the method used by C40 to determine whether its cities have peaked. The first section explains how C40 collects GHG emissions data for its cities. The second section explains how C40 analyses this data to conclude whether cities have peaked. And the final section, explains how this analysis is automated and visualised using an interactive dashboard built in Dash and hosted using Heroku. 
 
 ### 2) Data Collection 
-C40 collects time series GHG emissions data for each of its 93 cities on an annual basis by reviewing publicly available emissions data  and by contacting the Mayor’s Office in each city to check the data collected. Data sources are ranked using the data quality hierarchy in the table below.
+C40 collects time series GHG emissions data for each of its 93 cities on an annual basis by reviewing publicly available emissions data. Data sources are ranked using the data quality hierarchy in the table below.
 
 **Table 1: Data Source Hierarchy**
 
