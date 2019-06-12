@@ -136,7 +136,8 @@ In a small number of cases exceptions may be made to the above rule where there 
 ## 4) Data Automation/Visualisation
 The results of the peaking analysis are visualised using a dashboard developed using Dash (see here). On an annual basis C40 repeats the data collection exercise in section 2 to update the source data. In between times the results of the peaking analysis are likely to change as C40 collects city GPC and non-GPC data on a rolling basis. To ensure that these changes are reflected a Python script repeats the analysis on a daily basis ensuring the dashboard is up-to-date. 
 
+**Figure 2: Dashboard developed in Dash**
 
-
+![Alt text](./city_emission_tracker.png?raw=true "Front end developed in Dash")
 
 
