@@ -139,9 +139,3 @@ The results of the peaking analysis are visualised using dashboards developed us
 **Figure 2: Dashboard developed in Dash**
 
 ![Alt text](./city_emission_tracker.png?raw=true "Front end developed in Dash")
-
-**Figure 3: Dashboard developed in Tableau**
-
-![Alt text](./Emissions_Dashboard_Tableau.png?raw=true "Data visualisation in Tableau")
-
-
