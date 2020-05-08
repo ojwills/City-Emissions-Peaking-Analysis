@@ -1,11 +1,10 @@
-# City Emissions Tracker
+# City Emissions Analysis 
 
 ### 1) Background
-
-A city is considered to have “peaked emissions” when there is sufficient evidence to show that its greenhouse gas (GHG) emissions have decreased from a maximum level. This document explains the method used by C40 to determine whether its cities have peaked. The first section explains how C40 collects GHG emissions data for its cities. The second section explains how C40 analyses this data to conclude whether cities have peaked. And the final section, explains how this analysis is automated and visualised using an interactive dashboard built in Dash and hosted using Heroku. 
+This repository documents the methods and code used by C40 Cities Climate Leadership Group (C40) to determine whether its cities have peaked their greenhouse gas (GHG) emissions. A city is considered to have peaked when there is sufficient evidence to show that its emissions have decreased from a maximum level. This is a critical milestone for cities on the road to achieveing the goals of the Paris Climate Agreement. This repository includes the data collection, analysis and vizualisation methodlogies and scripts as well as links to press releases which announced the results during the 2019 World Mayors Summit.
 
 ### 2) Data Collection 
-C40 collects time series GHG emissions data for each of its 93 cities on an annual basis by reviewing publicly available emissions data. Data sources are ranked using the data quality hierarchy in the table below.
+Time series GHG emissions data was collected for each C40 city for the period 1990-2019 by reviewing publicly available emissiosn data. Data sources were ranked using the data quality hierarchy below.
 
 **Table 1: Data Source Hierarchy**
 
@@ -58,7 +57,9 @@ C40 collects time series GHG emissions data for each of its 93 cities on an annu
 </table>
 
 ### 3) Data Analysis
-The following criteria are used to determine if each city has peaked. If all criteria are TRUE it is concluded that the city has PEAKED. If criteria 1 and 3 are TRUE and criteria 2 and 4 are FALSE it is concluded that the city had NOT PEAKED. Otherwise, it is concluded that it is UNKNOWN if the city has peaked.
+The following criteria were used to determine if each city had peaked emissions. If all criteria were TRUE it was concluded that the city had not PEAKED. If criteria 1 and 3 are TRUE and criteria 2 and 4 were FALSE it was concluded that the city had NOT PEAKED. Otherwise, it was concluded that it was UNKNOWN if the city has peaked.
+
+**Table 2: Peaking Criteria**
 
 <table style="width:80%">
 
@@ -89,13 +90,24 @@ The following criteria are used to determine if each city has peaked. If all cri
 
 </table>
 
-For cities with more than one data source the decision tree below is used to select a single data source for inclusion in the results presented by the dashboard.
+For cities with more than one data source the decision tree below was used to select a single data source as the best available time series data. 
 
 **Figure 1: Decision tree used to select data sources for inclusion in the peaking analysis**
 
-![Alt text](./peaking_methodology.png?raw=true "Decision tree for dealing with multiple data sources")
+![Alt text](images/peaking_methodology.png?raw=true "Decision tree for dealing with multiple data sources")
 
-In a small number of cases exceptions may be made to the above rule where there are compelling reasons to assume that a city has peaked. These cases are documented in the table below. These cities are handled using the same logic for cities that have already peaked (see above).
+In a small number of cases exceptions were made as there were compelling reasons to assume that a city had peaked.These cases are documented in the table below. One way in which these edge cases were identified was by using the Kaya Identity to model emissions in future years. The Kaya Identity is exprsssed in the form:
+
+Kaya identity is expressed in the form:
+
+{\displaystyle F=P\cdot {\frac {G}{P}}\cdot {\frac {E}{G}}\cdot {\frac {F}{E}}}{\displaystyle F=P\cdot {\frac {G}{P}}\cdot {\frac {E}{G}}\cdot {\frac {F}{E}}}
+
+Where:
+
+ - F is city CO2 emissions from human sources
+ - P is city population
+ - G is city GDP
+ - E is city energy consumption
 
 **Table 3: Criteria to determine if C40 cities have peaked**
 
@@ -133,9 +145,26 @@ In a small number of cases exceptions may be made to the above rule where there 
 
 </table>
 
-## 4) Data Automation/Visualisation
+### 4) Data Automation/Visualisation
 The results of the peaking analysis are visualised using dashboards developed using Dash and Tableau. On an annual basis C40 repeats the data collection exercise in section 2 to update the source data. In between times the results of the peaking analysis are likely to change as C40 collects city GPC and non-GPC data on a rolling basis. To ensure that these changes are reflected a Python script repeats the analysis on a daily basis ensuring the dashboard is up-to-date. 
 
 **Figure 2: Dashboard developed in Dash**
 
-![Alt text](./city_emission_tracker.png?raw=true "Front end developed in Dash")
+![Alt text](images/city_emission_tracker.png?raw=true "Front end developed in Dash")
+
+
+### 5) Directions on use
+
+**Running the code**
+The backend script is designed to work with C40's internal GHG emissions database. However, the script could be adapted to use another database and would succesfullu apply peaking critieria helping the user to choose the best time series data for their analysis. 
+
+**Prerequisites**
+The code requires a number of python libraries which can be installed from the requirements.txt file. 
+
+### 6) Press releases
+The results of this analysis were announced at the World Mayor's Summit in 2019. Here are links to press releases:
+ 1. https://www.weforum.org/agenda/2019/10/carbon-emissions-climate-change-global-warming/
+ 2. https://www.outlookindia.com/newsscroll/worlds-30-largest-cities-peaked-emissions/1636075
+ 3. https://www.businessgreen.com/news/3082404/c40-30-major-cities-have-already-peaked-their-emissions
+ 4. https://www.smartcitiesworld.net/news/news/30-cities-say-their-greenhouse-gas-emissions-have-peaked--4662
+ 5. https://www.edie.net/news/9/C40--30-cities-have-reach-peak-emissions/
