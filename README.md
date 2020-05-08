@@ -100,7 +100,7 @@ In a small number of cases exceptions were made as there were compelling reasons
 
 Kaya identity is expressed in the form:
 
-{\displaystyle F=P\cdot {\frac {G}{P}}\cdot {\frac {E}{G}}\cdot {\frac {F}{E}}}{\displaystyle F=P\cdot {\frac {G}{P}}\cdot {\frac {E}{G}}\cdot {\frac {F}{E}}}
+F = P * G/P * E/G * F/E
 
 Where:
 
