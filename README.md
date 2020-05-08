@@ -155,11 +155,11 @@ The results of the peaking analysis are visualised using dashboards developed us
 
 ### 5) Directions on use
 
-**Running the code**
+**Running the code**<br>
 The backend script is designed to work with C40's internal GHG emissions database. However, the script could be adapted to use another database and would succesfullu apply peaking critieria helping the user to choose the best time series data for their analysis. 
 
-**Prerequisites**
-The code requires a number of python libraries which can be installed from the requirements.txt file. 
+**Prerequisites**<br>
+The code requires python 3 libraries which can be installed from the requirements.txt file. 
 
 ### 6) Press releases
 The results of this analysis were announced at the World Mayor's Summit in 2019. Here are links to press releases:
