@@ -146,9 +146,9 @@ Where:
 </table>
 
 ### 4) Data Automation/Visualisation
-The results of the peaking analysis are visualised using dashboards developed using Dash and Tableau. On an annual basis C40 repeats the data collection exercise in section 2 to update the source data. In between times the results of the peaking analysis are likely to change as C40 collects city GPC and non-GPC data on a rolling basis. To ensure that these changes are reflected a Python script repeats the analysis on a daily basis ensuring the dashboard is up-to-date. 
+The results of the peaking analysis are visualised using an internal dashboard developed in Dash and deployed on Heroku.The backend script is run on a monthly basis using a cron job to update the results.
 
-**Figure 2: Dashboard developed in Dash**
+**Figure 2: Results Dashboard**
 
 ![Alt text](images/city_emission_tracker.png?raw=true "Front end developed in Dash")
 
