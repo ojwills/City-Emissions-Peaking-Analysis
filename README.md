@@ -1,10 +1,10 @@
 # City Emissions Analysis 
 
 ### 1) Background
-This repository documents the methods and code used by C40 Cities Climate Leadership Group (C40) to determine whether its cities have peaked their greenhouse gas (GHG) emissions. A city is considered to have peaked when there is sufficient evidence to show that its emissions have decreased from a maximum level. This is a critical milestone for cities on the road to achieveing the goals of the Paris Climate Agreement. This repository includes the data collection, analysis and vizualisation methodlogies and scripts as well as links to press releases which announced the results during the 2019 World Mayors Summit.
+This repository documents the methods and code used by C40 Cities Climate Leadership Group (C40) to determine whether its cities have peaked their greenhouse gas (GHG) emissions. The results of this analysis were announced at the 2019 World Mayor's Summit and picked up by the global media (see footnotes for links).
 
 ### 2) Data Collection 
-Time series GHG emissions data was collected for each C40 city for the period 1990-2019 by reviewing publicly available emissiosn data. Data sources were ranked using the data quality hierarchy below.
+Time series emissions data was collected for each C40 city for the period 1990-2019 by reviewing inventories that had been submitted to C40 as well as publicly available data. Data sources were ranked using the data quality hierarchy below.
 
 **Table 1: Data Source Hierarchy**
 
